@@ -19,7 +19,7 @@ from app.paths import DATA
 
 log = logging.getLogger(__name__)
 
-TAIL_TURNS = 4
+TAIL_TURNS = 8
 CONFIDENCE_THRESHOLD = 0.45
 
 
@@ -33,7 +33,13 @@ def _load_jsonl(path: str) -> list[dict]:
 
 
 def _context_text(context: list[dict], tail: int = TAIL_TURNS) -> str:
-    return " ".join(t.get("text", "") for t in context[-tail:])
+    # Include speaker role prefix so the model can distinguish who said what.
+    parts = []
+    for t in context[-tail:]:
+        speaker = t.get("speaker", "")
+        text = t.get("text", "")
+        parts.append(f"[{speaker}] {text}")
+    return " ".join(parts)
 
 
 def _bucket_token(turn_index: int) -> str:
@@ -94,7 +100,7 @@ class LocalClassifier:
         self._intent_pipe = Pipeline([
             ("feat", _tfidf_union()),
             ("clf", CalibratedClassifierCV(
-                LinearSVC(max_iter=3000, C=1.0), cv=3, method="sigmoid"
+                LinearSVC(max_iter=3000, C=1.0, class_weight="balanced"), cv=3, method="sigmoid"
             )),
         ])
         self._intent_pipe.fit(texts, y_intent)
@@ -103,7 +109,7 @@ class LocalClassifier:
         self._action_pipe = Pipeline([
             ("feat", _tfidf_union()),
             ("clf", CalibratedClassifierCV(
-                LinearSVC(max_iter=3000, C=1.0), cv=3, method="sigmoid"
+                LinearSVC(max_iter=3000, C=1.0, class_weight="balanced"), cv=3, method="sigmoid"
             )),
         ])
         self._action_pipe.fit(texts_act, y_action)

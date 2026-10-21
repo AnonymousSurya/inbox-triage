@@ -5,7 +5,7 @@ import os
 
 from app.api.schemas import TriageRequest, TriageResponse
 from app.inference.llm import LLMClassifier
-from app.inference.local import LocalClassifier
+from app.inference.local import LocalClassifier  # noqa: F401 (re-exported via type hints)
 
 log = logging.getLogger(__name__)
 
@@ -37,7 +37,16 @@ class RouterClassifier:
             candidates = self._local.top_intents(request, n=8)
             llm_result = self._llm.predict(request, candidates)
             if llm_result is not None:
-                log.debug("LLM override for %s (local conf=%.3f)", request.id, result.confidence)
-                return llm_result
+                log.debug("LLM intent override for %s (local conf=%.3f)", request.id, result.confidence)
+                # Use LLM intent (better on rare/noisy cases) but keep local
+                # model's action and confidence — the local classifier is
+                # trained on 20k action examples and has calibrated probabilities.
+                return TriageResponse(
+                    id=result.id,
+                    intent=llm_result.intent,
+                    action=result.action,
+                    confidence=result.confidence,
+                    needs_human=result.needs_human,
+                )
 
         return result
