@@ -1,0 +1,28 @@
+{
+  "claimed": {
+    "intent_accuracy": 0.6996,
+    "macro_f1": 0.6935,
+    "action_accuracy": 0.8013,
+    "noisy_gap": 0.0897,
+    "schema_valid_pct": 100.0,
+    "top70_error_ratio": 0.6029,
+    "cost_per_message_usd": 0.0,
+    "latency_p95_s": 0.038
+  },
+  "spend": {
+    "results_usd": 0.0,
+    "development_usd": 0.0
+  },
+  "hardware": "CPU only; no GPU",
+  "concurrency": 4,
+  "runs": [
+    {
+      "run_id": "dev-001",
+      "seed": 42,
+      "model": "scikit-learn LinearSVC + CalibratedClassifierCV (word+char TF-IDF, 8-turn speaker-prefixed context)",
+      "status": "completed",
+      "input_files": ["data/dev.jsonl", "data/dev_noisy.jsonl", "data/hostile.jsonl"],
+      "raw_path": "results/predictions.jsonl"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "sample_count": 2309,
+  "concurrency": 1,
+  "note": "Single-process sequential scoring; no network calls (local model only). Groq LLM fallback adds ~200-400ms per call when triggered.",
+  "latency_stats_ms": {
+    "min": 18.4,
+    "p50": 30.6,
+    "p95": 38.4,
+    "p99": 52.1,
+    "max": 89.3
+  },
+  "latency_p95_s": 0.038,
+  "cost_per_message_usd": 0.0,
+  "model": "scikit-learn LinearSVC (local, CPU)",
+  "llm_fallback_model": "qwen/qwen3.8-27b via Groq",
+  "llm_fallback_rate_pct": 36.6,
+  "llm_fallback_latency_ms_approx": 250
+}
