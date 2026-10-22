@@ -80,3 +80,23 @@ The three hostile categories that "broke" early drafts of the service no longer 
 - **JEV / TypeSafe AI's evaluation framework.** Web-searched during design. A structured LLM output framework, not a classifier. Not applicable.
 
 The chosen stack — TF-IDF SVM as primary, Groq LLM as optional low-confidence fallback — delivers all six grader bars on CPU at $0.00/message with a median latency of 30ms. The seam between classifier and policy is explicit (`app/inference/`, `app/services/`), so a second model (embeddings, fine-tuned BERT) drops in as an additional `LocalClassifier` subclass without touching routes.
+
+## Local Classifier Experiments
+
+After submission, we benchmarked four alternative local classifiers against our production model using `scripts/experiment_classifiers.py`. All evaluated on the clean 2,000-row dev set.
+
+| Method | Intent acc | Action acc | Macro-F1 | Infer ms/req |
+|--------|-----------|-----------|----------|-------------|
+| **TF-IDF word+char, LinearSVC (production)** | **0.7265** | **0.8190** | **0.7204** | **1.0ms** |
+| Tuned TF-IDF (trigrams, C=2.0) | 0.7280 | 0.8155 | 0.7291 | 1.4ms |
+| Sentence Transformer all-MiniLM-L6-v2 + SVC | 0.7075 | 0.7250 | 0.6976 | 14.1ms |
+| SetFit 16-shot (paraphrase-MiniLM-L6-v2) | 0.5705 | 0.8190 | 0.6147 | 10.7ms |
+| DistilBERT fine-tuned | — | — | — | ~7h on CPU |
+
+**Tuned TF-IDF.** Extending to word trigrams and char 5-grams with a C sweep (0.5–5.0) yields +0.0015 intent accuracy at the cost of 60% more training time. Marginal — not worth the complexity.
+
+**Sentence Transformers.** `all-MiniLM-L6-v2` embeddings fed into a calibrated SVC scored *worse* than TF-IDF on both intent and action. The reason is domain-specific: ABCD intents are fine-grained (`shirt_defect_color` vs `shirt_defect_size`) where character-level exact matching outperforms semantic similarity. The transformer maps both to nearby embedding vectors; TF-IDF separates them cleanly by token.
+
+**SetFit.** Designed for few-shot learning; using all 20k examples causes OOM. Subsampled to 16 examples per class (1,523 total), intent accuracy dropped to 0.57 — too little data to cover 96 classes reliably in few-shot mode. Action accuracy held at 0.82 because that classifier was still TF-IDF.
+
+Full raw results: `results/experiment_results.json`. Experiment script: `scripts/experiment_classifiers.py`.

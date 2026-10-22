@@ -14,7 +14,7 @@
     "development_usd": 0.0
   },
   "hardware": "CPU only; no GPU",
-  "concurrency": 4,
+  "concurrency": 1,
   "runs": [
     {
       "run_id": "dev-001",

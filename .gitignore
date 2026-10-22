@@ -5,3 +5,5 @@ __pycache__
 .DS_Store
 .env
 results/report.json
+results/setfit_ckpt/
+results/distilbert_ckpt/
