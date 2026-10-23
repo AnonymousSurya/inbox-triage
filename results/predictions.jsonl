@@ -384,7 +384,7 @@
 {"id": "10086-10", "intent": "missing", "action": "validate-purchase", "confidence": 0.8444, "needs_human": false, "error": null}
 {"id": "142-35", "intent": "recover_password", "action": "ask-the-oracle", "confidence": 0.172, "needs_human": true, "error": null}
 {"id": "3233-8", "intent": "status_service_added", "action": "pull-up-account", "confidence": 0.844, "needs_human": false, "error": null}
-{"id": "321-5", "intent": "jacket_other_4", "action": "search-jacket", "confidence": 0.3895, "needs_human": true, "error": null}
+{"id": "321-5", "intent": "jacket_other_4", "action": "search-jacket", "confidence": 0.3894, "needs_human": true, "error": null}
 {"id": "8196-9", "intent": "bad_price_competitor", "action": "verify-identity", "confidence": 0.6691, "needs_human": false, "error": null}
 {"id": "2083-9", "intent": "membership_3", "action": "select-faq", "confidence": 0.8017, "needs_human": false, "error": null}
 {"id": "959-7", "intent": "pricing_3", "action": "search-faq", "confidence": 0.6879, "needs_human": false, "error": null}
@@ -466,7 +466,7 @@
 {"id": "9999-7", "intent": "status_due_amount", "action": "pull-up-account", "confidence": 0.786, "needs_human": false, "error": null}
 {"id": "6023-4", "intent": "pricing_3", "action": "search-faq", "confidence": 0.8303, "needs_human": false, "error": null}
 {"id": "6247-16", "intent": "manage_upgrade", "action": "membership", "confidence": 0.4689, "needs_human": false, "error": null}
-{"id": "6013-6", "intent": "recover_username", "action": "verify-identity", "confidence": 0.8352, "needs_human": false, "error": null}
+{"id": "6013-6", "intent": "recover_username", "action": "verify-identity", "confidence": 0.8351, "needs_human": false, "error": null}
 {"id": "4640-9", "intent": "status", "action": "verify-identity", "confidence": 0.6131, "needs_human": false, "error": null}
 {"id": "5251-7", "intent": "return_color", "action": "pull-up-account", "confidence": 0.8225, "needs_human": false, "error": null}
 {"id": "8726-10", "intent": "boots_how_3", "action": "search-boots", "confidence": 0.3991, "needs_human": true, "error": null}
@@ -905,7 +905,7 @@
 {"id": "9481-5", "intent": "pricing_4", "action": "search-faq", "confidence": 0.8298, "needs_human": false, "error": null}
 {"id": "7984-11", "intent": "manage_dispute_bill", "action": "membership", "confidence": 0.6423, "needs_human": false, "error": null}
 {"id": "9686-14", "intent": "status", "action": "validate-purchase", "confidence": 0.816, "needs_human": false, "error": null}
-{"id": "2048-10", "intent": "mistimed_billing_never_bought", "action": "ask-the-oracle", "confidence": 0.5787, "needs_human": false, "error": null}
+{"id": "2048-10", "intent": "mistimed_billing_never_bought", "action": "ask-the-oracle", "confidence": 0.5788, "needs_human": false, "error": null}
 {"id": "8395-14", "intent": "manage_downgrade", "action": "shipping-status", "confidence": 0.651, "needs_human": false, "error": null}
 {"id": "154-19", "intent": "search_results", "action": "instructions", "confidence": 0.6283, "needs_human": false, "error": null}
 {"id": "9793-8", "intent": "jeans_other_3", "action": "search-jacket", "confidence": 0.2697, "needs_human": true, "error": null}
@@ -918,7 +918,7 @@
 {"id": "129-30", "intent": "manage_dispute_bill", "action": "search-faq", "confidence": 0.168, "needs_human": true, "error": null}
 {"id": "3651-19", "intent": "manage_cancel", "action": "ask-the-oracle", "confidence": 0.3388, "needs_human": true, "error": null}
 {"id": "3188-11", "intent": "manage_change_phone", "action": "verify-identity", "confidence": 0.7248, "needs_human": false, "error": null}
-{"id": "1439-9", "intent": "status", "action": "pull-up-account", "confidence": 0.78, "needs_human": false, "error": null}
+{"id": "1439-9", "intent": "status", "action": "pull-up-account", "confidence": 0.7801, "needs_human": false, "error": null}
 {"id": "10129-9", "intent": "status_due_amount", "action": "pull-up-account", "confidence": 0.7538, "needs_human": false, "error": null}
 {"id": "5604-17", "intent": "manage_upgrade", "action": "update-order", "confidence": 0.6476, "needs_human": false, "error": null}
 {"id": "7243-8", "intent": "mistimed_billing_never_bought", "action": "pull-up-account", "confidence": 0.8724, "needs_human": false, "error": null}
@@ -1434,7 +1434,7 @@
 {"id": "899-17", "intent": "status", "action": "enter-details", "confidence": 0.3431, "needs_human": true, "error": null}
 {"id": "2851-9", "intent": "membership_2", "action": "search-faq", "confidence": 0.7059, "needs_human": false, "error": null}
 {"id": "3251-16", "intent": "refund_update", "action": "offer-refund", "confidence": 0.5977, "needs_human": false, "error": null}
-{"id": "8838-9", "intent": "status_credit_missing", "action": "ask-the-oracle", "confidence": 0.4527, "needs_human": false, "error": null}
+{"id": "8838-9", "intent": "status_credit_missing", "action": "ask-the-oracle", "confidence": 0.4528, "needs_human": false, "error": null}
 {"id": "9728-21", "intent": "manage_upgrade", "action": "update-order", "confidence": 0.7803, "needs_human": false, "error": null}
 {"id": "2011-13", "intent": "membership_3", "action": "select-faq", "confidence": 0.5553, "needs_human": false, "error": null}
 {"id": "2441-20", "intent": "reset_2fa", "action": "enter-details", "confidence": 0.8024, "needs_human": false, "error": null}
@@ -1588,7 +1588,7 @@
 {"id": "3630-22", "intent": "return_color", "action": "enter-details", "confidence": 0.7232, "needs_human": false, "error": null}
 {"id": "10092-20", "intent": "status_quantity", "action": "offer-refund", "confidence": 0.718, "needs_human": false, "error": null}
 {"id": "1416-16", "intent": "status_due_date", "action": "pull-up-account", "confidence": 0.6725, "needs_human": false, "error": null}
-{"id": "2142-35", "intent": "bad_price_competitor", "action": "promo-code", "confidence": 0.6872, "needs_human": false, "error": null}
+{"id": "2142-35", "intent": "bad_price_competitor", "action": "promo-code", "confidence": 0.6871, "needs_human": false, "error": null}
 {"id": "3021-8", "intent": "manage_extension", "action": "verify-identity", "confidence": 0.8943, "needs_human": false, "error": null}
 {"id": "10506-12", "intent": "recover_username", "action": "pull-up-account", "confidence": 0.2536, "needs_human": true, "error": null}
 {"id": "4002-4", "intent": "boots_how_1", "action": "search-faq", "confidence": 0.8261, "needs_human": false, "error": null}
@@ -1633,7 +1633,7 @@
 {"id": "8988-11", "intent": "bad_price_yesterday", "action": "record-reason", "confidence": 0.7738, "needs_human": false, "error": null}
 {"id": "2653-3", "intent": "status_payment_method", "action": "pull-up-account", "confidence": 0.7087, "needs_human": false, "error": null}
 {"id": "2057-9", "intent": "missing", "action": "pull-up-account", "confidence": 0.8284, "needs_human": false, "error": null}
-{"id": "6888-20", "intent": "status_service_added", "action": "validate-purchase", "confidence": 0.4761, "needs_human": false, "error": null}
+{"id": "6888-20", "intent": "status_service_added", "action": "validate-purchase", "confidence": 0.476, "needs_human": false, "error": null}
 {"id": "9769-8", "intent": "reset_2fa", "action": "pull-up-account", "confidence": 0.6518, "needs_human": false, "error": null}
 {"id": "2295-16", "intent": "cost", "action": "shipping-status", "confidence": 0.6099, "needs_human": false, "error": null}
 {"id": "7958-13", "intent": "refund_initiate", "action": "validate-purchase", "confidence": 0.6671, "needs_human": false, "error": null}
@@ -1753,7 +1753,7 @@
 {"id": "361-23", "intent": "return_color", "action": "validate-purchase", "confidence": 0.5428, "needs_human": false, "error": null}
 {"id": "8279-11", "intent": "status", "action": "subscription-status", "confidence": 0.4653, "needs_human": false, "error": null}
 {"id": "4523-24", "intent": "return_color", "action": "update-order", "confidence": 0.7169, "needs_human": false, "error": null}
-{"id": "6814-11", "intent": "promo_code_out_of_date", "action": "ask-the-oracle", "confidence": 0.4322, "needs_human": true, "error": null}
+{"id": "6814-11", "intent": "promo_code_out_of_date", "action": "ask-the-oracle", "confidence": 0.4323, "needs_human": true, "error": null}
 {"id": "7759-11", "intent": "status_shipping_question", "action": "send-link", "confidence": 0.2739, "needs_human": true, "error": null}
 {"id": "547-23", "intent": "pricing_4", "action": "search-pricing", "confidence": 0.4235, "needs_human": true, "error": null}
 {"id": "6215-6", "intent": "pricing_2", "action": "select-faq", "confidence": 0.7597, "needs_human": false, "error": null}
@@ -2234,7 +2234,7 @@
 {"id": "2017-30-noisy", "intent": "manage_pay_bill", "action": "enter-details", "confidence": 0.4894, "needs_human": false, "error": null}
 {"id": "6139-6-noisy", "intent": "manage_create", "action": "pull-up-account", "confidence": 0.8821, "needs_human": false, "error": null}
 {"id": "7671-5-noisy", "intent": "return_size", "action": "pull-up-account", "confidence": 0.8424, "needs_human": false, "error": null}
-{"id": "1349-38-noisy", "intent": "return_stain", "action": "enter-details", "confidence": 0.2849, "needs_human": true, "error": null}
+{"id": "1349-38-noisy", "intent": "return_stain", "action": "enter-details", "confidence": 0.2848, "needs_human": true, "error": null}
 {"id": "3019-10-noisy", "intent": "out_of_stock_one_item", "action": "record-reason", "confidence": 0.265, "needs_human": true, "error": null}
 {"id": "6905-9-noisy", "intent": "out_of_stock_general", "action": "pull-up-account", "confidence": 0.3557, "needs_human": true, "error": null}
 {"id": "3219-4-noisy", "intent": "search_results", "action": "search-faq", "confidence": 0.3321, "needs_human": true, "error": null}
